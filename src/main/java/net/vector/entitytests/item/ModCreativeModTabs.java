@@ -1,4 +1,4 @@
-package net.vector.fixe.item;
+package net.vector.entitytests.item;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -6,7 +6,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
-import static net.vector.fixe.fixe.MODID;
+import static net.vector.entitytests.entitytests.MODID;
 
 public class ModCreativeModTabs {
     public static final net.neoforged.neoforge.registries.DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =

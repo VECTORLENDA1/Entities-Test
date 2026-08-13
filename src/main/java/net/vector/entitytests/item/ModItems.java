@@ -1,13 +1,13 @@
-package net.vector.fixe.item;
+package net.vector.entitytests.item;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.vector.fixe.entity.ModEntities;
+import net.vector.entitytests.entity.ModEntities;
 
-import static net.vector.fixe.fixe.MODID;
+import static net.vector.entitytests.entitytests.MODID;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);

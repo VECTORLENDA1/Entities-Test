@@ -1,17 +1,16 @@
-package net.vector.fixe.entity;
+package net.vector.entitytests.entity;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.animal.Cod;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.vector.fixe.entity.custom.FixeEntity;
-import net.vector.fixe.entity.custom.MonkeyFuuuEntity;
+import net.vector.entitytests.entity.custom.FixeEntity;
+import net.vector.entitytests.entity.custom.MonkeyFuuuEntity;
 
 import java.util.function.Supplier;
 
-import static net.vector.fixe.fixe.MODID;
+import static net.vector.entitytests.entitytests.MODID;
 
 
 public class ModEntities {

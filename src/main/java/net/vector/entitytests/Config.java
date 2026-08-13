@@ -1,4 +1,4 @@
-package net.vector.fixe;
+package net.vector.entitytests;
 
 import java.util.List;
 
