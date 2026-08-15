@@ -33,6 +33,7 @@ public class MonkeyFuuuEntity extends Animal implements NeutralMob {
     );
     public final AnimationState idleAnimationState = new AnimationState();
     public int idleAnimationTimeout = 0;
+
     public static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(10, 20);
     public static final UniformInt ALERT_INTERVAL = TimeUtil.rangeOfSeconds(4, 6);
     public int remainingPersistentAngerTime;
@@ -107,11 +108,18 @@ public class MonkeyFuuuEntity extends Animal implements NeutralMob {
     }
 
     private void setupAnimationStates() {
-        if(this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = 80;
-            this.idleAnimationState.start(this.tickCount);
+        boolean isMoving = this.walkAnimation.speed() > 0.1F;
+
+        if (!isMoving) {
+            if (this.idleAnimationTimeout <= 0) {
+                this.idleAnimationTimeout = 40;
+                this.idleAnimationState.start(this.tickCount);
+            } else {
+                --this.idleAnimationTimeout;
+            }
         } else {
-            --this.idleAnimationTimeout;
+            this.idleAnimationState.stop();
+            this.idleAnimationTimeout = 0;
         }
     }
 
